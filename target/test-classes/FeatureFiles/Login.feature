@@ -13,15 +13,27 @@ Feature: Webstore Login functionality
       | email                | pass             |
       | RaviTest@yopmail.com | Test@12345       |
       | QAUser@gmail.com     | QAUser@gmail.com |
-  #@Sanity @Regression
-  #Scenario Outline: Unsuccessfull login with valid credentials
-    #Given User navigates to login page
-    #When User enters email address "<email>" into email field
-    #And User enters password "<pass>" into password field
-    #And User clicks on Login button
-    #Then User should not get successfully logged in
-#
-    #Examples: 
-      #| email                  | pass      |
-      #| ravindn10898@gmail.com | Test@1345 |
-      #| ravik23n@yopmail.com   | Test@145  |
+
+  @Sanity @Regression
+  Scenario Outline: Unsuccessfull login with Invalid credentials
+    Given User navigates to login page
+    When User enters email address "<email>" into email field
+    And User enters password "<pass>" into password field
+    And User clicks on Login button
+    Then User should not get successfully logged in
+
+    Examples: 
+      | email                  | pass      |
+      | ravindn10898@gmail.com | Test@1345 |
+      | ravik23n@yopmail.com   | Test@145  |
+
+  @Sanity @Regression
+  Scenario Outline: Validate invalid email entered text
+    Given User navigates to login page
+    When User enters email address "<email>" into email field
+    Then User should get "Please enter a valid email address." alert message
+
+    Examples: 
+      | email             |
+      | ravindn10898@.com |
+      | dummymail         |

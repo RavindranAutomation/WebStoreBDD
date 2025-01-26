@@ -40,7 +40,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -50,7 +49,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Jan 26, 2025 01:10:54 am</span>
+			<span class='label blue darken-3 suite-start-time'>Jan 26, 2025 10:54:02 am</span>
 			</a>
 		</ul>
 	</div>
@@ -65,7 +64,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -77,8 +76,8 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@Regression</a></li>
 					<li><a href='#'>@Sanity</a></li>
+					<li><a href='#'>@Regression</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -120,12 +119,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$0%'>
-                    <span class='strong'>0</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
+                    <span class='strong'>1</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
-                    1</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -138,12 +137,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='50%'>
-                    <span class='strong'>1</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>6</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>
-                    1</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -158,14 +157,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='84%'>
-                    <span class='strong'>11</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>28</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='7%'>
-                    1</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='7%'>
-                    1</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -186,11 +185,11 @@
 	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Webstore Login functionality</span>
-						<span class='test-time'>Jan 26, 2025 01:10:55 am</span>
-						<span class='test-status right fail'>Fail</span>
+						<span class='test-time'>Jan 26, 2025 10:54:04 am</span>
+						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -200,14 +199,14 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 
-<div class='scenario outline node' test-id='2' status='fail'>
+<div class='scenario outline node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 11.252</span>
+	<span class='duration right label'>00 00 12.642</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Successfull login with valid credentials</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Successfull login with valid credentials</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>email</td><td>pass</td></tr><tr><td>RaviTest@yopmail.com</td><td>Test@12345</td></tr><tr><td>RaviQA@yopmail.com</td><td>Test@123</td></tr></table></div>
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>email</td><td>pass</td></tr><tr><td>RaviTest@yopmail.com</td><td>Test@12345</td></tr><tr><td>QAUser@gmail.com</td><td>QAUser@gmail.com</td></tr></table></div>
 	
 	
 	<ul class='steps'>
@@ -246,8 +245,8 @@
 				</li>
 			</ul>
 		</li>
-		<li test-id='17' class='node scenario Fail' status='Fail'>
-			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Successfull login with valid credentials</div>
+		<li test-id='17' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Successfull login with valid credentials</div>
 
 				<div class='category-list'>
 						<span class='category label'>@Sanity</span>
@@ -260,63 +259,158 @@
 
 				</li>
 				<li test-id='21' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_enters_email_address_into_email_field(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User enters email address "RaviQA@yopmail.com" into email field</h6>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_enters_email_address_into_email_field(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User enters email address "QAUser@gmail.com" into email field</h6>
 
 				</li>
 				<li test-id='23' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_enters_password_into_password_field(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User enters password "Test@123" into password field</h6>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_enters_password_into_password_field(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User enters password "QAUser@gmail.com" into password field</h6>
 
 				</li>
 				<li test-id='25' class='gc and Pass' status='Pass'>
 					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_clicks_on_login_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks on Login button</h6>
 
 				</li>
-				<li test-id='27' class='gc then Fail' status='Fail'>
-					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_should_get_successfully_logged_in()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then User should get successfully logged in</h6>
+				<li test-id='27' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_should_get_successfully_logged_in()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User should get successfully logged in</h6>
 
-							<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'Log out') or a[@href='/Log out']]"}
-  (Session info: chrome=131.0.6778.265)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cc49fb74b219008b8ae6f08fda3f8856, findElement {using=xpath, value=//a[contains(text(),'Log out') or a[@href='/Log out']]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\Ravin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52958}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52958/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: cc49fb74b219008b8ae6f08fda3f8856
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy25.isDisplayed(Unknown Source)
-	at com.webstore.pageobjects.HeadersPage.isLogoutDisplayed(HeadersPage.java:92)
-	at com.webstore.stepdefinitions.LoginSteps.user_should_get_successfully_logged_in(LoginSteps.java:45)
-	at ✽.User should get successfully logged in(file:///C:/Users/Ravin/eclipse-workspace/WebStoreBDD/src/test/resources/FeatureFiles/Login.feature:9)
-</textarea>
 				</li>
-				<li test-id='28' class='gc * Pass' status='Pass'>
-					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.webstore.hooks.MyHooks.takeScreenshot(io.cucumber.java.Scenario)</h6>
+				<li test-id='29' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_should_logout()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User should logout</h6>
 
-							<div class="node-step">Failed  - Successfull login with valid credentials</div>
-							<div class='screenshots'>
-								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../../screenshot/embedded1.png' src='../../screenshot/embedded1.png'>
-							</div>
 				</li>
-				<li test-id='29' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_should_logout()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And User should logout</h6>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='31' status='pass'>
 
-							<div class="node-step">Step skipped</div>
+	<span class='duration right label'>00 00 03.864</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Unsuccessfull login with Invalid credentials</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>email</td><td>pass</td></tr><tr><td>ravindn10898@gmail.com</td><td>Test@1345</td></tr><tr><td>ravik23n@yopmail.com</td><td>Test@145</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='32' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Unsuccessfull login with Invalid credentials</div>
+
+				<div class='category-list'>
+						<span class='category label'>@Sanity</span>
+						<span class='category label'>@Regression</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='34' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_navigates_to_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User navigates to login page</h6>
+
+				</li>
+				<li test-id='36' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_enters_email_address_into_email_field(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User enters email address "ravindn10898@gmail.com" into email field</h6>
+
+				</li>
+				<li test-id='38' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_enters_password_into_password_field(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User enters password "Test@1345" into password field</h6>
+
+				</li>
+				<li test-id='40' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_clicks_on_login_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks on Login button</h6>
+
+				</li>
+				<li test-id='42' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_should_not_get_successfully_logged_in()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User should not get successfully logged in</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='44' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Unsuccessfull login with Invalid credentials</div>
+
+				<div class='category-list'>
+						<span class='category label'>@Sanity</span>
+						<span class='category label'>@Regression</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='46' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_navigates_to_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User navigates to login page</h6>
+
+				</li>
+				<li test-id='48' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_enters_email_address_into_email_field(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User enters email address "ravik23n@yopmail.com" into email field</h6>
+
+				</li>
+				<li test-id='50' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_enters_password_into_password_field(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User enters password "Test@145" into password field</h6>
+
+				</li>
+				<li test-id='52' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_clicks_on_login_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks on Login button</h6>
+
+				</li>
+				<li test-id='54' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_should_not_get_successfully_logged_in()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User should not get successfully logged in</h6>
+
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='56' status='pass'>
+
+	<span class='duration right label'>00 00 02.115</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Validate invalid email entered text</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>email</td></tr><tr><td>ravindn10898@.com</td></tr><tr><td>dummymail</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='57' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validate invalid email entered text</div>
+
+				<div class='category-list'>
+						<span class='category label'>@Sanity</span>
+						<span class='category label'>@Regression</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='59' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_navigates_to_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User navigates to login page</h6>
+
+				</li>
+				<li test-id='61' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_enters_email_address_into_email_field(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User enters email address "ravindn10898@.com" into email field</h6>
+
+				</li>
+				<li test-id='63' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_should_get_alert_message(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User should get "Please enter a valid email address." alert message</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='65' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validate invalid email entered text</div>
+
+				<div class='category-list'>
+						<span class='category label'>@Sanity</span>
+						<span class='category label'>@Regression</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='67' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_navigates_to_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User navigates to login page</h6>
+
+				</li>
+				<li test-id='69' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_enters_email_address_into_email_field(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User enters email address "dummymail" into email field</h6>
+
+				</li>
+				<li test-id='71' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.webstore.stepdefinitions.LoginSteps.user_should_get_alert_message(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User should get "Please enter a valid email address." alert message</h6>
+
 				</li>
 			</ul>
 		</li>
@@ -366,16 +460,15 @@ Session ID: cc49fb74b219008b8ae6f08fda3f8856
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Regression</span>
+						<span class='category-name'>@Sanity</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						<span class='label fail'>1</span>
+						<span class='label pass'>6</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 6</span>
+							
 							
 						</div>
 						<div class='category-tests'>
@@ -389,14 +482,34 @@ Session ID: cc49fb74b219008b8ae6f08fda3f8856
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 26, 2025 01:10:55 am</td>
+										<td>Jan 26, 2025 10:54:04 am</td>
 										<td class='linked' test-id='3'>Successfull login with valid credentials</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 26, 2025 01:11:04 am</td>
+										<td>Jan 26, 2025 10:54:13 am</td>
 										<td class='linked' test-id='17'>Successfull login with valid credentials</td>
-										<td><span class='test-status Fail'>Fail</span></td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 26, 2025 10:54:17 am</td>
+										<td class='linked' test-id='32'>Unsuccessfull login with Invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 26, 2025 10:54:19 am</td>
+										<td class='linked' test-id='44'>Unsuccessfull login with Invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 26, 2025 10:54:20 am</td>
+										<td class='linked' test-id='57'>Validate invalid email entered text</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 26, 2025 10:54:21 am</td>
+										<td class='linked' test-id='65'>Validate invalid email entered text</td>
+										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -405,16 +518,15 @@ Session ID: cc49fb74b219008b8ae6f08fda3f8856
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Sanity</span>
+						<span class='category-name'>@Regression</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						<span class='label fail'>1</span>
+						<span class='label pass'>6</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 6</span>
+							
 							
 						</div>
 						<div class='category-tests'>
@@ -428,14 +540,34 @@ Session ID: cc49fb74b219008b8ae6f08fda3f8856
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 26, 2025 01:10:55 am</td>
+										<td>Jan 26, 2025 10:54:04 am</td>
 										<td class='linked' test-id='3'>Successfull login with valid credentials</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 26, 2025 01:11:04 am</td>
+										<td>Jan 26, 2025 10:54:13 am</td>
 										<td class='linked' test-id='17'>Successfull login with valid credentials</td>
-										<td><span class='test-status Fail'>Fail</span></td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 26, 2025 10:54:17 am</td>
+										<td class='linked' test-id='32'>Unsuccessfull login with Invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 26, 2025 10:54:19 am</td>
+										<td class='linked' test-id='44'>Unsuccessfull login with Invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 26, 2025 10:54:20 am</td>
+										<td class='linked' test-id='57'>Validate invalid email entered text</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 26, 2025 10:54:21 am</td>
+										<td class='linked' test-id='65'>Validate invalid email entered text</td>
+										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -451,91 +583,7 @@ Session ID: cc49fb74b219008b8ae6f08fda3f8856
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='exception-view' class='view hide'>
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-				<i class='material-icons'>search</i> Search
-				</a>
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-	<div class='subview-left left'>
-		<div class='view-summary'>
-			<ul id='exception-collection' class='exception-collection'>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>StackTrace</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Jan 26, 2025 01:11:06 am</td>
-										<td class='linked' test-id='27'>Then User should get successfully logged in</td>
-										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'Log out') or a[@href='/Log out']]"}
-  (Session info: chrome=131.0.6778.265)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cc49fb74b219008b8ae6f08fda3f8856, findElement {using=xpath, value=//a[contains(text(),'Log out') or a[@href='/Log out']]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\Ravin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52958}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52958/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: cc49fb74b219008b8ae6f08fda3f8856
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy25.isDisplayed(Unknown Source)
-	at com.webstore.pageobjects.HeadersPage.isLogoutDisplayed(HeadersPage.java:92)
-	at com.webstore.stepdefinitions.LoginSteps.user_should_get_successfully_logged_in(LoginSteps.java:45)
-	at ✽.User should get successfully logged in(file:///C:/Users/Ravin/eclipse-workspace/WebStoreBDD/src/test/resources/FeatureFiles/Login.feature:9)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='exception-name'></h5>
-		</div>
-	</div>
-</div>
-<!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -549,31 +597,31 @@ Session ID: cc49fb74b219008b8ae6f08fda3f8856
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>6</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>13</div>
+					<div class='panel-lead'>28</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jan 26, 2025 01:10:54 am</div>
+					<div class='panel-lead'>Jan 26, 2025 10:54:02 am</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jan 26, 2025 01:11:07 am</div>
+			 		<div class='panel-lead'>Jan 26, 2025 10:54:23 am</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 12.786</div>
+					<div class='panel-lead'>00 00 20.384</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -589,21 +637,21 @@ Session ID: cc49fb74b219008b8ae6f08fda3f8856
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@Regression</td>
-							<td>1</td>
-							<td>1</td>
+							<td>@Sanity</td>
+							<td>6</td>
+							<td>0</td>
 							<td>0</td>
 							<td>
-									50%
+									100%
 							</td>
 						</tr>
 						<tr>
-							<td>@Sanity</td>
-							<td>1</td>
-							<td>1</td>
+							<td>@Regression</td>
+							<td>6</td>
+							<td>0</td>
 							<td>0</td>
 							<td>
-									50%
+									100%
 							</td>
 						</tr>
 					</table>
@@ -618,34 +666,34 @@ Session ID: cc49fb74b219008b8ae6f08fda3f8856
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 0,
-				failParent: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				childCount: 2,
-				passChild: 1,
-				failChild: 1,
+				childCount: 6,
+				passChild: 6,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 13,
-				passGrandChild: 11,
-				failGrandChild: 1,
+				grandChildCount: 28,
+				passGrandChild: 28,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 1,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "Webstore Login functionality":11.259
+			        "Webstore Login functionality":18.661
 			};
 		</script>
 		

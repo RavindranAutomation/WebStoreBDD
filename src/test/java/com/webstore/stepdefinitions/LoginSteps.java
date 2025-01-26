@@ -1,5 +1,6 @@
 package com.webstore.stepdefinitions;
 
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 
 import com.webstore.driverfactory.DriverFactory;
@@ -26,7 +27,7 @@ public class LoginSteps {
 	@When("User enters email address {string} into email field")
 	public void user_enters_email_address_into_email_field(String email) {
 		loginPage = new LoginPage(DriverFactory.getDriver());
-		loginPage.enterEmail(email);
+		loginPage.enterEmail(email+Keys.TAB);
 
 	}
 
@@ -48,6 +49,25 @@ public class LoginSteps {
 	@Then("User should logout")
 	public void user_should_logout() {
 		headerPage.clickOnLogoutHeader();
+	}
+
+	@Then("User should not get successfully logged in")
+	public void user_should_not_get_successfully_logged_in() {
+		if (loginPage.isInvalidAttemptAlertDispalyed()) {
+			Assert.assertEquals("Login was unsuccessful. Please correct the errors and try again.",
+					loginPage.getInvalidLoginAlertMessage());
+
+		} else {
+			Assert.fail();
+		}
+
+	}
+
+	@Then("User should get {string} alert message")
+	public void user_should_get_alert_message(String invalidEmailALert) {
+
+		Assert.assertEquals(invalidEmailALert, loginPage.getInvalidEmailEnteredMessage());
+
 	}
 
 }
