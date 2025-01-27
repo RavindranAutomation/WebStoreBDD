@@ -1,7 +1,5 @@
 package com.webstore.hooks;
 
-import java.time.Duration;
-
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 

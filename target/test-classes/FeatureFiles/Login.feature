@@ -37,3 +37,11 @@ Feature: Webstore Login functionality
       | email             |
       | ravindn10898@.com |
       | dummymail         |
+
+  @Sanity @Regression
+  Scenario: Validate the password instruction message
+    Given User navigates to login page
+    When User clicks on the forget password link
+    And User enters the email in the recovery email field
+    And User clicks on the recovery button
+    Then User should get proper "Email with instructions has been sent to you." message

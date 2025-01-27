@@ -7,7 +7,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features="src/test/resources/FeatureFiles",
+		features="src/test/resources/FeatureFiles/Login.feature",
 		glue= {"com.webstore.stepdefinitions","com.webstore.hooks"},
 		dryRun=!true,
 		monochrome=true,
@@ -23,5 +23,6 @@ import io.cucumber.junit.CucumberOptions;
 
 public class TestRunner {
 
+	
 
 }

@@ -3,12 +3,16 @@ package com.webstore.pageobjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.webstore.driverfactory.DriverFactory;
 
 public class LoginPage extends BasePage {
+	public WebDriver driver = DriverFactory.getDriver();
 
 	public LoginPage(WebDriver driver) {
-		super(driver);
-
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 
 	@FindBy(xpath = "//div[@class='inputs']/child::input[@id='Email']")
@@ -25,10 +29,10 @@ public class LoginPage extends BasePage {
 
 	@FindBy(xpath = "//div[@class='validation-summary-errors']/span[contains(text(),'unsuccessful')]")
 	private WebElement invalidLoginAlertMessage;
-	
+
 	@FindBy(xpath = "//div[@class='inputs']//child::span[@for='Email']")
 	private WebElement invalidEmailMessage;
-	
+
 	public void enterEmail(String email) {
 		typeTextIntoElement(emailField, email, 3);
 
@@ -48,18 +52,18 @@ public class LoginPage extends BasePage {
 		javaScriptClick(forgotPasswordLink, 3);
 
 	}
-	
+
 	public String getInvalidLoginAlertMessage() {
-		
+
 		return invalidLoginAlertMessage.getText();
 
 	}
-	
+
 	public String getInvalidEmailEnteredMessage() {
 		return getTextFromElement(invalidEmailMessage, 3);
 
 	}
-	
+
 	public boolean isInvalidAttemptAlertDispalyed() {
 		return invalidLoginAlertMessage.isDisplayed();
 	}
